@@ -160,16 +160,15 @@ def team_names
 end
 
 def player_numbers(team)
-  #numbers = []
+  numbers = []
   game_hash.each do |location, team_data|
     if team_data[:team_name] == team
       team_data[:players].collect do |player_data|
-        player_data[:number]
-        #numbers << player_data[:number]
+        numbers << player_data[:number]
       end
     end
   end
-  #numbers
+  numbers
 end
 
 def player_stats(name)
